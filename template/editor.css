@@ -1,0 +1,34 @@
+p,body,pre { margin:0;padding:0; }
+input:outline { border:0; }
+
+#command {font:300 15px/1 consolas;width:580px;padding:4px 10px;position:fixed;top:0;left:50%;margin-left:-290px;background:#555;z-index:3;border:1px solid #666;border-top:0;color:#7EC7EF;display:none;border-radius:50px; box-shadow:0 0 10px #7EC7EF;}
+#command > input { font:300 15px/1 consolas;width:566px;background:none;border:none;color:inherit;margin-left:4px; }
+/*
+#tip { position:fixed;top:0;left:0;right:0;bottom:0;z-index:9;text-align:center;color:#fff;border-radius:10px;display:block;opacity:1;pointer-events:none; }
+#tip._off { top:-1500px;opacity:0;transition:all 1s; } */
+
+#editor { width:100%;height:100%; }
+
+.tip_view { z-index:9;color:#ccc;height:90%;width:90%;position:fixed;top:40px;left:5%;background:rgba(0, 0, 0, .8);border-radius:20px;font:300 15px/1.2 consolas;opacity:1;overflow-y:auto; }
+.tip_view._off { top:-1000px;opacity:0;transition:all 1s;-webkit-transition:all 1s; }
+.tip_view > h2 { border-bottom:1px solid #888;margin:0 10px 20px 10px;padding:10px 0;clear:both;text-align:center; }
+.tip_view > ._g { float:left;width:33%;line-height:1.5;margin-bottom:40px; }
+.tip_view > ._g._c2 { width:50%; }
+.tip_view > ._g:after { content:'';display:block;clear:both; }
+.tip_view > ._g  > em { float:left;clear:both;font-style:normal;text-align:right;color:#DD0;width:160px; }
+.tip_view > ._g._c2  > em { width:260px; }
+.tip_view > ._g  > em:after { content:':';margin:0 10px 0 6px; }
+.tip_view > ._g  > p { float:left; }
+
+.tip_view ._code { padding-left:70px; }
+.tip_view ._code > b { font-style:normal;color:#DD0; }
+
+
+center > table:first-child { display:none; }
+center > p > table { table-layout:fixed;width:100%;height:100%; }
+
+#tmpl_name { color:blue;font: 700 16px/1 consolas;text-align:center;background:none;border:0; }
+
+body .CodeMirror { width:96%;height:880px;font:300 15px/1.2 consolas;position:relative;margin:0 auto; } 
+body .CodeMirror._f11 { position:fixed;left:0;top:0;width:100%;height:100%;z-index:2; }
+

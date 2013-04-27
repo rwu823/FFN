@@ -1,0 +1,16 @@
+#spin { display:none;position:fixed;z-index:99999;top:50%;left:50%;color:#fff;background:rgba( 0,0,0,.6);border-radius:3px;width:140px;font:12px/1 arial;padding:8px;margin:-70px 0 0 -70px; }
+#spin >s{ width:12px;height:12px;border-radius:50px;padding:2px;display:inline-block;margin-right:6px;vertical-align:-4px;
+  background: -webkit-linear-gradient(top, #fff, #222 90% );
+  background: -moz-linear-gradient(top, #fff, #222 90% );
+  -webkit-animation :spin .5s linear infinite ;
+  animation :spin .5s linear infinite ;
+ }
+
+#spin >s:after { content:'';border-radius:50px;background:#000;display:block;width:100%;height:100%; }
+
+@-webkit-keyframes spin{ 
+  100% { transform:rotate(360deg); } 
+}
+@keyframes spin{
+  100% { transform:rotate(360deg); }
+}
