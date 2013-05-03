@@ -3,8 +3,10 @@
 
 ##How to use?
 Setup add-ons in your browser
-###Firefox
-[Scriptish](http://scriptish.org/)
+###Firefox ( Best support )
+[Scriptish](http://scriptish.org/) `recommendation`
+
+[Greasemonkey](https://addons.mozilla.org/en-US/firefox/addon/greasemonkey/)
 
 ###Chrome
 [Tampermonkey](https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo?hl=en-US)
