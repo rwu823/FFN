@@ -22,5 +22,5 @@
 
   el_script.onload = init ;
 })(function(){  
-  unsafeWindow.seajs.use('https://raw.github.com/rwu823/FFN/master/template/main.js')
+  unsafeWindow.seajs.use('http://l.rwu823.tk/FFN/template/main.js')
 });
