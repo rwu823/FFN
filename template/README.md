@@ -3,41 +3,18 @@
 
 ##How to use?
 Setup add-ons in your browser
-###Firefox
-[Scriptish](http://scriptish.org/)
+###Firefox ( Best support )
+[Scriptish](http://scriptish.org/) `recommendation`
+
+[Greasemonkey](https://addons.mozilla.org/en-US/firefox/addon/greasemonkey/)
 
 ###Chrome
 [Tampermonkey](https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo?hl=en-US)
 
 
-##Just copy and paste, Be funny and enjoy !!
+##Install Script
+https://raw.github.com/rwu823/FFN/master/template/assets/ffn-template.user.js
 
-```js
-// ==UserScript==
-// @id             FFN_template
-// @name           FFN_template
-// @version        2013/2/27
-// @author         Rocky Wu <rwu.tw@ffn.com>
-// @description    Improvement template system
-// @website        https://github.com/rwu823/FFN/tree/master/template
-
-// @include        *friendfinderinc.com*/cgi-bin/admin/dictionary/*
-// @include        *friendfinderinc.com*/cgi-bin/admin/release/cr.cgi*
-
-// @run-at         document-end
-// ==/UserScript==
-
-;(function(init){
-  var el_script = document.createElement('script');
-  el_script.src = 'http://rwu823.github.io/lib/js/sea.js';
-  el_script.id = 'seajsnode';
-  document.head.appendChild( el_script );
-
-  el_script.onload = init ;
-})(function(){  
-  unsafeWindow.seajs.use('http://dl.dropboxusercontent.com/u/3430677/github/FFN/template/main.js')
-});
-```
 
 ##Any questions?
 rwu.tw@ffn.com
