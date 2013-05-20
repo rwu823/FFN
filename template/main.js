@@ -10,7 +10,7 @@ seajs.config({
 seajs.use('lib/js/kit', function(Kit){
 
   var QS = Kit.queryString()
-    , pathUrl = 'http://l.rwu823.tk/FFN/template'
+    , pathUrl = 'http://l.rwu823.tk/FFN/template/'
 
   if( /pushtolive\.cgi$/i.test(location.pathname) ) {
     if( QS.multipush ) seajs.use( pathUrl + 'batch' ) ;
