@@ -1,12 +1,8 @@
 
 seajs.config({
-  base : 'http://dl.dropboxusercontent.com/u/3430677/github/',
-  // base : 'http://敷敷恩.tk/',
-  alias : {
-    // jq : '//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js'
-  }, 
+  base : 'http://rwu823.github.io/',
   preload : [    
-    '//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js'
+    '//ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js'
   ],
   debug : true
 }) ;
@@ -14,16 +10,16 @@ seajs.config({
 seajs.use('lib/js/kit', function(Kit){
 
   var QS = Kit.queryString()
-    , folder = 'FFN/scriptish/template/'
+    , pathUrl = 'https://raw.github.com/rwu823/FFN/master/template/'
 
   if( /pushtolive\.cgi$/i.test(location.pathname) ) {
-    if( QS.multipush ) seajs.use( folder + 'batch' ) ;
-    else if ( QS.pu ) seajs.use( folder + 'publish' ) ;
+    if( QS.multipush ) seajs.use( pathUrl + 'batch' ) ;
+    else if ( QS.pu ) seajs.use( pathUrl + 'publish' ) ;
   }
-  else if (/history\.cgi$/i.test(location.pathname) ) seajs.use( folder + 'history' ) ;
-  else if (/cr\.cgi$/i.test(location.pathname) ) seajs.use( folder + 'cr' ) ;
-  else if( /editor\.cgi$/i.test(location.pathname) ) seajs.use( folder + 'editor' ) ;
-  else if( /grid\.cgi$/i.test(location.pathname) ) seajs.use( folder + 'grid' ) ;
+  else if (/history\.cgi$/i.test(location.pathname) ) seajs.use( pathUrl + 'history' ) ;
+  else if (/cr\.cgi$/i.test(location.pathname) ) seajs.use( pathUrl + 'cr' ) ;
+  else if( /editor\.cgi$/i.test(location.pathname) ) seajs.use( pathUrl + 'editor' ) ;
+  else if( /grid\.cgi$/i.test(location.pathname) ) seajs.use( pathUrl + 'grid' ) ;
 })
 
 
