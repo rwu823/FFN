@@ -1,6 +1,3 @@
-# Start your template script 
-<hr>
-
 ##How to use?
 Setup add-ons in your browser
 ###Firefox ( Best support )
