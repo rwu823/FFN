@@ -1,7 +1,7 @@
 // ==UserScript==
 // @id             ffn-template
 // @name           ffn-template
-// @version        2013/5/20
+// @version        2013/7/10
 // @author         Rocky Wu <rwu.tw@ffn.com>
 // @description    Improvement template system
 // @website        https://github.com/rwu823/FFN/tree/master/template
@@ -22,5 +22,5 @@
 
   el_script.onload = init ;
 })(function(){  
-  unsafeWindow.seajs.use('http://l.rwu823.tk/FFN/template/main.js')
+  unsafeWindow.seajs.use('https://dl.dropboxusercontent.com/u/3430677/FFN/template/main.js')
 });
