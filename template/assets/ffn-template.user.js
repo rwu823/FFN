@@ -1,7 +1,7 @@
 // ==UserScript==
 // @id             ffn-template
 // @name           ffn-template
-// @version        2013/7/10
+// @version        2013.7.10
 // @author         Rocky Wu <rwu.tw@ffn.com>
 // @description    Improvement template system
 // @website        https://github.com/rwu823/FFN/tree/master/template
