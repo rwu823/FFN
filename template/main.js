@@ -2,7 +2,7 @@
 seajs.config({
   base : 'http://rwu823.github.io/',
   preload : [    
-    '//ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js'
+    '//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js'
   ],
   debug : true
 }) ;
@@ -10,7 +10,7 @@ seajs.config({
 seajs.use('lib/js/kit', function(Kit){
 
   var QS = Kit.queryString()
-    , pathUrl = 'http://l.rwu823.tk/FFN/template/'
+    , pathUrl = 'https://dl.dropboxusercontent.com/u/3430677/FFN/template/'
 
   if( /pushtolive\.cgi$/i.test(location.pathname) ) {
     if( QS.multipush ) seajs.use( pathUrl + 'batch' ) ;

@@ -2,7 +2,7 @@ p,body,pre { margin:0;padding:0; }
 input:outline { border:0; }
 
 #command {font:300 15px/1 consolas;width:580px;padding:4px 10px;position:fixed;top:0;left:50%;margin-left:-290px;background:#555;z-index:3;border:1px solid #666;border-top:0;color:#7EC7EF;display:none;border-radius:50px; box-shadow:0 0 10px #7EC7EF;}
-#command > input { font:300 15px/1 consolas;width:566px;background:none;border:none;color:inherit;margin-left:4px; }
+#command > input { outline:none;font:300 15px/1 consolas;width:566px;background:none;border:none;color:inherit;margin-left:4px; }
 /*
 #tip { position:fixed;top:0;left:0;right:0;bottom:0;z-index:9;text-align:center;color:#fff;border-radius:10px;display:block;opacity:1;pointer-events:none; }
 #tip._off { top:-1500px;opacity:0;transition:all 1s; } */

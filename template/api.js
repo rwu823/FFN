@@ -1,3 +1,4 @@
+'use strict';
 define(function(require){  
   
   var Kit = require('lib/js/kit') ;
@@ -112,6 +113,26 @@ define(function(require){
         success : function( res){
           Api.Res.Clear = res ;
           if( $.isFunction( callback ) ) callback( res ) ;
+        }
+      })
+    },
+
+    createReveiw : function(d, done){
+      d = $.extend({
+            pushID : '',
+            ver : ''
+          }, d)
+
+      $.ajax({
+        url : '/cgi-bin/admin/push.cgi?cmd=pushdetail&pushid=' + d.pushID +';create_review=1;subclass=template;commitid=' + d.ver +';branch=main;silo=all',
+        type : 'GET',
+        dataType : 'html',
+        success : function(htm){
+          var $a = $('a[href^="/cgi-bin/admin/release/cr.cgi?review_id"]', $(htm) ),
+              reviewID = $a.text().split('-')[1]
+
+          done( { reviewID : reviewID } )
+
         }
       })
     },

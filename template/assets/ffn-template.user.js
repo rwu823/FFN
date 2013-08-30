@@ -1,7 +1,7 @@
 // ==UserScript==
 // @id             ffn-template
 // @name           ffn-template
-// @version        2013.7.10
+// @version        2013.8.30
 // @author         Rocky Wu <rwu.tw@ffn.com>
 // @description    Improvement template system
 // @website        https://github.com/rwu823/FFN/tree/master/template
@@ -16,7 +16,7 @@
 
 ;(function(init){
   var el_script = document.createElement('script');
-  el_script.src = 'http://rwu823.github.io/lib/js/sea.js';
+  el_script.src = 'http://cdn.staticfile.org/seajs/2.1.1/sea.js';
   el_script.id = 'seajsnode';
   document.head.appendChild( el_script );
 
