@@ -31,8 +31,8 @@ define(function(require , exports , module ){
 
       var Key = {
 
-        Ctrl : {
-          '83' : function(lang){ // S
+        Ctrl: {
+          '83': function(lang){ // S
             lang = lang || QS.lang 
             if( isDB ){
               alert("DB EDIT can't to save Local") 
@@ -55,7 +55,7 @@ define(function(require , exports , module ){
           
         },
 
-        Alt : {
+        Alt: {
           '71': function(){ // G Grid
             open( location.href.replace( 'editor.cgi' , 'grid.cgi' ) )   
           },
