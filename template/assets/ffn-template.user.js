@@ -15,12 +15,12 @@
 // ==/UserScript==
 
 ;(function(init){
-  var el_script = document.createElement('script');
-  el_script.src = 'http://cdn.staticfile.org/seajs/2.1.1/sea.js';
-  el_script.id = 'seajsnode';
-  document.head.appendChild( el_script );
+  var el_script = document.createElement('script')
+  el_script.src = 'http://cdn.staticfile.org/seajs/2.1.1/sea.js'
+  el_script.id = 'seajsnode'
+  document.head.appendChild( el_script )
 
-  el_script.onload = init ;
+  el_script.onload = init 
 })(function(){  
   unsafeWindow.seajs.use('https://dl.dropboxusercontent.com/u/3430677/FFN/template/main.js')
-});
+})

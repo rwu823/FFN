@@ -7,10 +7,10 @@ define(function(require){
 
   var printo = function(s, o){
     return s.replace( /\{\{([\w-_]+)\}\}/g, function(m, m2){
+
       return String( o[m2] ) || '';
     })
   }
-  
 
   if( QS.version) {
     var $textarea = $('textarea[name="data"]');
@@ -19,7 +19,6 @@ define(function(require){
     $(window).on('focus', function(e){
       $textarea.select();  
     })
-
 
   }else{
     
@@ -44,9 +43,13 @@ define(function(require){
 
     $('head').append(
       '<style>' +
-        'form[action="history.cgi"]>table>tbody>tr:hover { background:#ffc; }' +
-        'a.btn { font:12px/1 consolas; display:inline-block;text-decoration:none;background:#55A82F;color:#fff;padding:5px 7px;border-radius:3px;border:1px solid #ccc; }'+
-        'a.btn:hover { background:#2B6311 } ' +
+        'form[action="history.cgi"]>table>tbody>tr:hover { background:#ffc!important; }' +
+        'form[action="history.cgi"]>table { width:98%;font:14px/1.2 arial; }' +
+        'form[action="history.cgi"]>table td { padding:4px 0;}' +
+        'form[action="history.cgi"]>table a { text-decoration:none;color:#36c; }' +
+        'form[action="history.cgi"]>table a:hover { text-decoration:underline; }' +
+        'a.btn { color:#fff!important;font:12px/1 arial; display:inline-block;text-decoration:none;background:#55A82F;color:#fff;padding:5px 7px;border-radius:3px;border:1px solid #ccc; }'+
+        'a.btn:hover { background:#2B6311;text-decoration:none!important; } ' +
         'a.btn._create { background:#C77A7A;min-width: 40px; }' +
         'a.btn._create:hover { background:#882A2A; }' +
       '</style>'
@@ -76,7 +79,7 @@ define(function(require){
         .attr('href', 'https://admin.friendfinderinc.com' + ohref )
         .text( t.split('-')[1] )
     })
-
+    
 
     // had push history
     $('table tr>td:last-of-type:has(a)', $form).each(function(){
@@ -100,12 +103,19 @@ define(function(require){
           .addClass( 'btn _create' )
           .text( 'create' )        
       }
-      
+
+      // set live tr background
+      if( /^Pushed to live/i.test( $this_a.text() ) ){
+        $this.parent().css('backgroundColor', 'rgba(248, 199, 0, 0.25)')
+      }
     })
 
     // set btn create
     $emptyReviews.on('mouseup', function(e){
         e.preventDefault();
+
+        if( e.button === 2 ) return ;
+
         var $this = $(this),
             timer = 0,
             count = 0,
@@ -120,7 +130,6 @@ define(function(require){
 
               timer = setTimeout( dotInterval, 500 )
             }
-
         dotInterval();
 
         api.createReveiw({
