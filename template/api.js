@@ -49,7 +49,7 @@ define(function(require){
       })
     },
     commit: function (data, callback){
-      data = $.extend(Api.defaultData, {
+      $.extend(data, Api.defaultData, {
         commitaction: 'Commit to DB',
         commmit_comment: data.comment,
         data: data.code
@@ -64,7 +64,7 @@ define(function(require){
     },
 
     save: function ( data, callback ){
-      data = $.extend(Api.defaultData, {
+      $.extend(data, Api.defaultData, {
         action: 'Save local',
         data: data.code
       }, true )
@@ -94,7 +94,8 @@ define(function(require){
     },
 
     clear: function(callback){
-      var data = $.extend(Api.defaultData, {
+      var data = {}
+      $.extend(data, Api.defaultData, {
         action: 'Clear local'
       }, true )
       Api.Ajax.Clear = $.ajax({

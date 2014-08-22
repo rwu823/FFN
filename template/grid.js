@@ -1,9 +1,15 @@
+'use strict'
 define(function(require){
-  
+
   var $grid_table = $('table[bgcolor^="333"] table') 
     , $grid_table_tds = $('>tbody>tr>td', $grid_table)
     , $grid_site_tds = $('>tbody>tr>td:nth-of-type(1)', $grid_table)
     , $grid_lang_tds = $('>tbody>tr:eq(0)>td', $grid_table)
+
+    , Kit = require('lib/js/kit')
+
+    , QS = Kit.queryString()
+
 
   $('head').append(
     '<style>' +
@@ -32,4 +38,15 @@ define(function(require){
     $grid_table_tds.removeClass('_on');    
   })
 
+
+  if(QS.splitSites){
+    var sites = QS.splitSites.split('|'),
+        $select = $('select[name="site"]')
+
+    sites.forEach(function(site){
+      $('option[value="' + site + '"]', $select).attr('selected', 'selected')      
+    })
+
+    $('input[name="dosplit"]').attr('checked', 'checked')
+  }
 })

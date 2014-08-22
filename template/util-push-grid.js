@@ -7,7 +7,9 @@ define(function(require){
   }
 
   function toggleSite(){
-    toggle_all_languages(QS.site) ;
+    QS.site.split('|').forEach(function(site){
+      toggle_all_languages(site) ;
+    })
   }
 
   function lightCheckbox(){

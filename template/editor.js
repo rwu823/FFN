@@ -1,5 +1,5 @@
 'use strict'
-define(function(require , exports , module ){  
+define(function(require, exports, module ){  
   
   var Mockup = require('./mockup')
     , Api = require('./api')
@@ -11,15 +11,52 @@ define(function(require , exports , module ){
 
       $advedit = $('#advedit'),
       $form = $('#editor'),
+
       $center = $('body > center'),
       has_rd = $('> font:first-child', $form).length,
       $status = $(has_rd ? '> p > b:first-child' : '> b:first-child', $form),
       isDB = /^DB/i.test($status.text()),
+
+      $formContents = has_rd ? $('>p', $form).contents() : $form.contents(),
       CM, Timer = {},
       title = document.title = QS.keyword + '-' + QS.site + '-' + QS.lang,
       url = decodeURIComponent(location.href),
 
-      $command, $command_in, $tip = {}, $cm 
+      $command, $command_in, $tip = {}, $cm,
+
+      getHeadLine = function(){
+        var hl = []
+        for(var i = 3, _ai, l = $formContents.length; i < l; i++){
+          _ai = $formContents[i]
+          if( _ai.nodeType === 1 && _ai.id === 'advedit') break;
+          hl.push(_ai)
+        }
+        return $(hl)
+      },
+
+      $headLine = getHeadLine(),
+
+      $btnPublish = $('input[value="Publish"]'),
+      $btnLoadLocal = $('input[value="Load local"]'),
+      $btnSaveLocal = $('input[value="Save local"]'),
+      $btnClearLocal = $('input[value="Clear local"]'),
+      $btnReloadFromDB = $('input[value="Reload from DB"]'),
+      $btnCommit = $('input[value="Commit to DB"]'),
+
+      $pickReview = $('select[name="pickreview"]')
+
+  if(1||location.port === '21321') !function(){
+
+    $headLine.wrapAll('<div id="head-line" />')
+    $headLine = $('#head-line')
+    $headLine
+      .html($btnPublish)
+      .append($btnCommit, $pickReview, $btnClearLocal)
+
+    $status.append(' ' + document.title)
+  }()
+
+  $status.attr('id', isDB ? 'status-db' : 'status-local')
 
   var EventListener = (function(){          
 
@@ -69,7 +106,7 @@ define(function(require , exports , module ){
           },
 
           '90': function(){ // Z Toogle DB/Local
-            location.href = isDB ?  url + '&action=Load local' : url.replace(/(&|)action=Load local(&|)/, '') 
+            location.href = isDB ?  url + '&action=Load local' : url.replace('action=Load local', '')
           },
 
           '77': function(){ // M main.cgi
@@ -327,7 +364,11 @@ define(function(require , exports , module ){
 
       $(window).on('keydown', hotkey) 
 
-      $command_in.on('keydown', hotString).attr('idx_cmd', arr_cmd.length) 
+      $command_in.on('keydown', hotString).attr('idx_cmd', arr_cmd.length)
+
+      $status.on('click', 'font', function(e){
+        location.href = isDB ?  url + '&action=Load local' : url.replace('action=Load local', '')
+      })
       
     }
 
@@ -352,31 +393,27 @@ define(function(require , exports , module ){
       Load.codemirror({emmet:true, theme:'night' }, function(){    
               
         CM = CodeMirror.fromTextArea( $advedit[0], {
-          mode: /^(javascript|css)[-_]/i.test( QS.keyword ) && RegExp.$1 || 'html',            
+          mode: 'text/' + (/^(javascript|css)[-_]/i.test( QS.keyword ) && RegExp.$1 || 'html'),
           lineNumbers: true,
           matchBrackets: true,
           theme: 'night',
           tabSize: 2,
-          autoCloseTags: true, 
+          autoCloseTags: true,
 
-          profile: 'xhtml'          
+          profile: 'xhtml'
         })          
-
         // CM.focus() 
 
-        $cm = $(CM.display.wrapper) 
-        
+        $cm = $(CM.display.wrapper)
       }) 
 
     },
 
     init: function(){
-
       Main.runCodemirror() 
       Main.insertMockup() 
 
       EventListener.init() 
-
       document.cookie = 'debug_cookie_perf_off=1; path=/; domain=.' + /([^.]+\.[^.]+)$/.test(document.domain) && RegExp.$1
     }
 

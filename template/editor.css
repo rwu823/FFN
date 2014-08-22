@@ -1,13 +1,33 @@
 p,body,pre { margin:0;padding:0; }
 input:outline { border:0; }
+font[size="1"] { font-size: 14px;color:#bbb; }
+font[color="black"], b {color:#fff;}
+font[color="green"] {color:rgb(125, 248, 125);}
 
-#command {font:300 15px/1 consolas;width:580px;padding:4px 10px;position:fixed;top:0;left:50%;margin-left:-290px;background:#555;z-index:3;border:1px solid #666;border-top:0;color:#7EC7EF;display:none;border-radius:50px; box-shadow:0 0 10px #7EC7EF;}
+#command {font:300 15px/1 consolas;width:580px;padding:4px 10px;position:fixed;top:0;left:50%;margin-left:-290px;background:#555;z-index:3;border:1px solid #808080;color:#7EC7EF;display:none;border-radius:5px;}
 #command > input { outline:none;font:300 15px/1 consolas;width:566px;background:none;border:none;color:inherit;margin-left:4px; }
 /*
 #tip { position:fixed;top:0;left:0;right:0;bottom:0;z-index:9;text-align:center;color:#fff;border-radius:10px;display:block;opacity:1;pointer-events:none; }
 #tip._off { top:-1500px;opacity:0;transition:all 1s; } */
 
-#editor { width:100%;height:100%; }
+
+#status-local, #status-db{ cursor: pointer; }
+
+/*#status-local{ background: #008000; }*/
+/*#status-db{ background: #f00; }*/
+
+#editor { width:100%;height:100%;background: #3F4041;color:#bbb;}
+#editor a {color:#A1C0FD;}
+#head-line { padding: 4px 0; width: 95%; margin: 0 auto; }
+#head-line:after { content: ''; display: block;clear:both;}
+
+#head-line input{ border: 1px solid #ccc; border-radius: 3px; padding: 4px 6px; cursor: pointer; background: #c4eaff; color: #000 }
+#head-line input[value="Publish"]{ background: #C7A82B; color: #fff; margin-right: 20px;  }
+#head-line input[value="Load local"]{ display: none; }
+#head-line input[value="Save local"]{ display: none; }
+#head-line input[value="Clear local"]{ float: right; background: #B41F1A; color: #fff;}
+#head-line input[value="Reload from DB"]{ display: none; }
+#head-line input[value="Commit to DB"]{ background: #a036a0; color: #fff; }
 
 .tip_view { z-index:9;color:#ccc;height:90%;width:90%;position:fixed;top:40px;left:5%;background:rgba(0, 0, 0, .8);border-radius:20px;font:300 15px/1.2 consolas;opacity:1;overflow-y:auto; }
 .tip_view._off { top:-1000px;opacity:0;transition:all 1s;-webkit-transition:all 1s; }
@@ -29,6 +49,14 @@ center > p > table { table-layout:fixed;width:100%;height:100%; }
 
 #tmpl_name { color:blue;font: 700 16px/1 consolas;text-align:center;background:none;border:0; }
 
+
 body .CodeMirror { width:96%;height:880px;font:300 15px/1.2 consolas;position:relative;margin:0 auto; } 
 body .CodeMirror._f11 { position:fixed;left:0;top:0;width:100%;height:100%;z-index:2; }
 
+/*.CodeMirror-vscrollbar::-webkit-scrollbar,
+.CodeMirror-hscrollbar::-webkit-scrollbar{background:#eee;width:12px;height:12px;}
+.CodeMirror-vscrollbar::-webkit-scrollbar-thumb,
+.CodeMirror-hscrollbar::-webkit-scrollbar-thumb{background:rgba(0,0,0,0.4);}
+.CodeMirror-vscrollbar::-webkit-scrollbar-thumb:hover,
+.CodeMirror-hscrollbar::-webkit-scrollbar-thumb:hover{background:rgba(0,0,0,0.6)}
+*/
