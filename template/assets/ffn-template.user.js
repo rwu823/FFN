@@ -21,7 +21,7 @@
   el_script.id = 'seajsnode'
   document.head.appendChild( el_script )
 
-  el_script.onload = init 
-})(function(){  
-  unsafeWindow.seajs.use('https://dl.dropboxusercontent.com/u/3430677/FFN/template/main.js')
+  el_script.onload = init
+})(function(){
+  unsafeWindow.seajs.use('https://raw.githubusercontent.com/rwu823/FFN/master/template/main.js')
 })
