@@ -9,7 +9,7 @@ seajs.config({
 seajs.use('lib/js/kit', function(Kit){
 
   var QS = Kit.queryString(),
-      pathUrl = 'https://raw.githubusercontent.com/rwu823/FFN/master/template/',
+      pathUrl = 'https://rawgit.com/rwu823/FFN/master/template/',
       ph = location.pathname
 
   if(/pushtolive\.cgi$/i.test(ph)) {
