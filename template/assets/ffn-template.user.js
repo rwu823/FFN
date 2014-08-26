@@ -23,5 +23,5 @@
 
   el_script.onload = init
 })(function(){
-  unsafeWindow.seajs.use('https://raw.githubusercontent.com/rwu823/FFN/master/template/main.js')
+  unsafeWindow.seajs.use('https://rawgit.com/rwu823/FFN/master/template/main.js')
 })
