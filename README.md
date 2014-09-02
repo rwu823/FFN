@@ -8,13 +8,11 @@
 Install add-ons in your favorited browser
 
 **Firefox ( Best support )**
-[Scriptish](http://scriptish.org/) `recommendation`
-
-[Greasemonkey](https://addons.mozilla.org/en-US/firefox/addon/greasemonkey/)
-
+  * [Scriptish](http://scriptish.org/) `recommendation`
+  * [Greasemonkey](https://addons.mozilla.org/en-US/firefox/addon/greasemonkey/)
 
 **Chrome**
-[Tampermonkey](https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo?hl=en-US)
+  * [Tampermonkey](https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo?hl=en-US)
 
 
 ##Setup Script
