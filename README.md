@@ -1,6 +1,5 @@
 #FFN
 
-=======
 #####Please review the change log
 [Change log](https://github.com/rwu823/FFN/blob/master/template/assets/changelog.md)
 
