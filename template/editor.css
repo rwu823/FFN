@@ -25,8 +25,8 @@ font[color="green"] {color:rgb(125, 248, 125);}
                    border-radius: 4px; } 
 #editor .button, 
 #head-line input { color: #FFF; background-color: #5BC0DE; border-color: #46B8DA; }
-#editor .button  { margin: 0 10px; text-decoration: none; } 
-#head-line { padding: 4px 0; width: 95%; margin-left: 5px; }
+#editor .button  { margin-left: 5px; text-decoration: none; } 
+#head-line { padding: 4px 0; width: 95%; margin: 0 auto; }
 #head-line:after { content: ''; display: block; clear:both;}
 
 #head-line input[value="Publish"]        { background-color: #F0AD4E; border-color: #EEA236; margin-right: 5px; }
