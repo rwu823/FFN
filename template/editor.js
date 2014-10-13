@@ -43,7 +43,19 @@ define(function(require, exports, module ){
       $btnReloadFromDB = $('input[value="Reload from DB"]'),
       $btnCommit = $('input[value="Commit to DB"]'),
 
-      $pickReview = $('select[name="pickreview"]')
+      $pickReview = $('select[name="pickreview"]'),
+      $links        = $form.find('a'),
+/*
+      $grid         = $link.eq(0).addClass('button'),  //Grid
+      $search       = $link.eq(1).addClass('button'),  //Search
+      $pretty_print = $link.eq(2).addClass('button'),  //Pretty Print
+      $history      = $link.eq(3).addClass('button'),  //History
+      $preview      = $link.eq(4).addClass('button'),  //Preview
+*/
+      $info         = $link.eq(5).addClass('button'),  //Info
+      $check_push   = $link.eq(6).addClass('button'),  //Check Push
+      $fix_char     = $link.eq(7).addClass('button')   //Fix Garbled Characters
+
 
   if(1||location.port === '21321') !function(){
 
@@ -51,7 +63,7 @@ define(function(require, exports, module ){
     $headLine = $('#head-line')
     $headLine
       .html($btnPublish)
-      .append($btnCommit, $pickReview, $btnClearLocal)
+      .append($btnCommit, $pickReview, $info, $check_push, $fix_char, $btnClearLocal)
 
     $status.append(' ' + document.title)
   }()
@@ -396,7 +408,7 @@ define(function(require, exports, module ){
           mode: 'text/' + (/^(javascript|css)[-_]/i.test( QS.keyword ) && RegExp.$1 || 'html'),
           lineNumbers: true,
           matchBrackets: true,
-          theme: 'night',
+          theme: 'monokai',
           tabSize: 2,
           autoCloseTags: true,
 
