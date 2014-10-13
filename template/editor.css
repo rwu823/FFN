@@ -18,16 +18,26 @@ font[color="green"] {color:rgb(125, 248, 125);}
 
 #editor { width:100%;height:100%;background: #3F4041;color:#bbb;}
 #editor a {color:#A1C0FD;}
+#editor .button, 
+#head-line input,
+#head-line select{ display: inline-block; padding: 6px 12px; font-size: 14px; font-weight: 400; line-height: 1.42857143; text-align: center; white-space: nowrap; vertical-align: middle;
+                   cursor: pointer; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; background-image: none; border: 1px solid rgba(0, 0, 0, 0);
+                   border-radius: 4px; color: #FFF; background-color: #5BC0DE; border-color: #46B8DA; } 
 #head-line { padding: 4px 0; width: 95%; margin: 0 auto; }
-#head-line:after { content: ''; display: block;clear:both;}
+#head-line:after { content: ''; display: block; clear:both;}
 
-#head-line input{ border: 1px solid #ccc; border-radius: 3px; padding: 4px 6px; cursor: pointer; background: #c4eaff; color: #000 }
-#head-line input[value="Publish"]{ background: #C7A82B; color: #fff; margin-right: 20px;  }
-#head-line input[value="Load local"]{ display: none; }
-#head-line input[value="Save local"]{ display: none; }
-#head-line input[value="Clear local"]{ float: right; background: #B41F1A; color: #fff;}
-#head-line input[value="Reload from DB"]{ display: none; }
-#head-line input[value="Commit to DB"]{ background: #a036a0; color: #fff; }
+#head-line input[value="Publish"]        { background-color: #F0AD4E; border-color: #EEA236; margin-right: 20px; }
+#head-line input[value="Clear local"]    { background-color: #D9534F; border-color: #D43F3A; float: right; }
+#head-line input[value="Commit to DB"]   { background-color: #428BCA; border-color: #357EBD; }
+#head-line input[value="Load local"]     { display: none; }
+#head-line input[value="Save local"]     { display: none; }
+#head-line input[value="Reload from DB"] { display: none; }
+
+#editor .button:hover,
+#head-line input:hover { background-color: #31B0D5; border-color: #269ABC; }
+#head-line input[value="Publish"]:hover      { background-color: #EC971F; border-color: #D58512; }
+#head-line input[value="Clear local"]:hover  { background-color: #C9302C; border-color: #AC2925; }
+#head-line input[value="Commit to DB"]:hover { background-color: #3071A9; border-color: #285E8E; }
 
 .tip_view { z-index:9;color:#ccc;height:90%;width:90%;position:fixed;top:40px;left:5%;background:rgba(0, 0, 0, .8);border-radius:20px;font:300 15px/1.2 consolas;opacity:1;overflow-y:auto; }
 .tip_view._off { top:-1000px;opacity:0;transition:all 1s;-webkit-transition:all 1s; }
