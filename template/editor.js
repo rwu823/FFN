@@ -42,8 +42,18 @@ define(function(require, exports, module ){
       $btnClearLocal = $('input[value="Clear local"]'),
       $btnReloadFromDB = $('input[value="Reload from DB"]'),
       $btnCommit = $('input[value="Commit to DB"]'),
-
-      $pickReview = $('select[name="pickreview"]')
+      $pickReview = $('select[name="pickreview"]'),
+      $links        = $form.find('a'),
+/*
+      $grid         = $links.eq(0).addClass('button'),  //Grid
+      $search       = $links.eq(1).addClass('button'),  //Search
+      $pretty_print = $links.eq(2).addClass('button'),  //Pretty Print
+      $history      = $links.eq(3).addClass('button'),  //History
+      $preview      = $links.eq(4).addClass('button'),  //Preview
+*/
+      $info         = $links.eq(5).addClass('button'),  //Info
+      $check_push   = $links.eq(6).addClass('button'),  //Check Push
+      $fix_char     = $links.eq(7).addClass('button')   //Fix Garbled Characters
 
   if(1||location.port === '21321') !function(){
 
@@ -51,7 +61,7 @@ define(function(require, exports, module ){
     $headLine = $('#head-line')
     $headLine
       .html($btnPublish)
-      .append($btnCommit, $pickReview, $btnClearLocal)
+      .append($btnCommit, $pickReview, $info, $check_push, $fix_char, $btnClearLocal)
 
     $status.append(' ' + document.title)
   }()
