@@ -51,9 +51,9 @@ define(function(require, exports, module ){
       $history      = $links.eq(3).addClass('button'),  //History
       $preview      = $links.eq(4).addClass('button'),  //Preview
 */
-      $info         = $links.eq(5).addClass('button'),  //Info
-      $check_push   = $links.eq(6).addClass('button'),  //Check Push
-      $fix_char     = $links.eq(7).addClass('button')   //Fix Garbled Characters
+      $info         = $links.eq(5).addClass('button').attr('target', '_blank'),  //Info
+      $check_push   = $links.eq(6).addClass('button').attr('target', '_blank'),  //Check Push
+      $fix_char     = $links.eq(7).addClass('button').attr('target', '_blank')   //Fix Garbled Characters
 
   if(1||location.port === '21321') !function(){
 

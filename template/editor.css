@@ -26,10 +26,10 @@ font[color="green"] {color:rgb(125, 248, 125);}
 #editor .button, 
 #head-line input { color: #FFF; background-color: #5BC0DE; border-color: #46B8DA; }
 #editor .button  { margin: 0 10px; text-decoration: none; } 
-#head-line { padding: 4px 0; width: 95%; margin: 0 auto; }
+#head-line { padding: 4px 0; width: 95%; margin-left: 5px; }
 #head-line:after { content: ''; display: block; clear:both;}
 
-#head-line input[value="Publish"]        { background-color: #F0AD4E; border-color: #EEA236; margin-right: 20px; }
+#head-line input[value="Publish"]        { background-color: #F0AD4E; border-color: #EEA236; margin-right: 5px; }
 #head-line input[value="Clear local"]    { background-color: #D9534F; border-color: #D43F3A; float: right; }
 #head-line input[value="Commit to DB"]   { background-color: #428BCA; border-color: #357EBD; }
 #head-line input[value="Load local"]     { display: none; }
