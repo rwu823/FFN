@@ -22,7 +22,10 @@ font[color="green"] {color:rgb(125, 248, 125);}
 #head-line input,
 #head-line select{ display: inline-block; padding: 6px 12px; font-size: 14px; font-weight: 400; line-height: 1.42857143; text-align: center; white-space: nowrap; vertical-align: middle;
                    cursor: pointer; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; background-image: none; border: 1px solid rgba(0, 0, 0, 0);
-                   border-radius: 4px; color: #FFF; background-color: #5BC0DE; border-color: #46B8DA; } 
+                   border-radius: 4px; } 
+#editor .button, 
+#head-line input { color: #FFF; background-color: #5BC0DE; border-color: #46B8DA; }
+#editor .button  { margin: 0 10px; } 
 #head-line { padding: 4px 0; width: 95%; margin: 0 auto; }
 #head-line:after { content: ''; display: block; clear:both;}
 
