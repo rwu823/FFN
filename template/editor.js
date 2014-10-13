@@ -46,15 +46,15 @@ define(function(require, exports, module ){
       $pickReview = $('select[name="pickreview"]'),
       $links        = $form.find('a'),
 /*
-      $grid         = $link.eq(0).addClass('button'),  //Grid
-      $search       = $link.eq(1).addClass('button'),  //Search
-      $pretty_print = $link.eq(2).addClass('button'),  //Pretty Print
-      $history      = $link.eq(3).addClass('button'),  //History
-      $preview      = $link.eq(4).addClass('button'),  //Preview
+      $grid         = $links.eq(0).addClass('button'),  //Grid
+      $search       = $links.eq(1).addClass('button'),  //Search
+      $pretty_print = $links.eq(2).addClass('button'),  //Pretty Print
+      $history      = $links.eq(3).addClass('button'),  //History
+      $preview      = $links.eq(4).addClass('button'),  //Preview
 */
-      $info         = $link.eq(5).addClass('button'),  //Info
-      $check_push   = $link.eq(6).addClass('button'),  //Check Push
-      $fix_char     = $link.eq(7).addClass('button')   //Fix Garbled Characters
+      $info         = $links.eq(5).addClass('button'),  //Info
+      $check_push   = $links.eq(6).addClass('button'),  //Check Push
+      $fix_char     = $links.eq(7).addClass('button')   //Fix Garbled Characters
 
 
   if(1||location.port === '21321') !function(){
