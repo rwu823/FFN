@@ -1,21 +1,24 @@
 p,body,pre { margin:0;padding:0; }
 input:outline { border:0; }
 font[size="1"] { font-size: 14px;color:#bbb; }
-font[color="black"], b { color:#fff; }
-font[color="green"] { color:rgb(125, 248, 125); }
+font[color="black"], b { color:#D7D8D9; }
+font[color="green"] { color: #8FDDFF; }
+
 
 #command {font:300 15px/1 consolas;width:580px;padding:4px 10px;position:fixed;top:0;left:50%;margin-left:-290px;background:#555;z-index:3;border:1px solid #808080;color:#7EC7EF;display:none;border-radius:5px;}
 #command > input { outline:none;font:300 15px/1 consolas;width:566px;background:none;border:none;color:inherit;margin-left:4px; }
 
-#status-local, #status-db { cursor: pointer; }
+#status-local, #status-db { font-size: 12px; text-align: center; width: 100%; display: block; }
+#status-local+br { display: none; }
 
-#editor   { width: 100%; height: 100%; background-color: #3F4041; color: #bbb; }
+#editor   { width: 100%; height: 100%; background-color: #47484B; color: #bbb; }
 #editor a { color: #A1C0FD; }
+input[type="submit"],
 #editor .button, 
 #head-line input,
-#head-line select{ display: inline-block; padding: 6px 12px; font-size: 14px; font-weight: 400; line-height: 1.42857143; text-align: center; white-space: nowrap; vertical-align: middle;
+#head-line select{ display: inline-block; padding: 5px 10px; font-size: 12px; font-weight: 400; line-height: 1.4; text-align: center; white-space: nowrap; vertical-align: middle;
                    cursor: pointer; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; background-image: none; border: 1px solid rgba(0, 0, 0, 0);
-                   border-radius: 4px; } 
+                   border-radius: 3px; } 
 #editor .button  { margin-left: 5px; text-decoration: none; } 
 
 #head-line       { padding: 4px 0; width: 96%; margin: 0 auto; }
@@ -57,6 +60,11 @@ center > p > table { table-layout:fixed;width:100%;height:100%; }
 
 body .CodeMirror { width: 96%; height: 880px; font: 300 13px/1.4 'DejaVu Sans Mono', 'consolas', monospace; position: relative; margin: 0 auto; } 
 body .CodeMirror._f11 { position: fixed; left: 0; top: 0; width: 100%; height: 100%; z-index: 2; }
+
+/*BOTTOM AREA*/
+td[bgcolor="white"] { background-color: #1C1C1E; color: #CCC; }
+a[href^="grid.cgi"] { color: #D85896; } /* tree, use, parse */
+a[href^="pushtolive.cgi"] { color: #B770A6; } 
 
 /*.CodeMirror-vscrollbar::-webkit-scrollbar,
 .CodeMirror-hscrollbar::-webkit-scrollbar{background:#eee;width:12px;height:12px;}
