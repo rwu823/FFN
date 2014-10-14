@@ -459,7 +459,7 @@ define(function(require, exports, module) {
 
     Main.init()
 
-    WebFontConfig = {
+    window.WebFontConfig = {
         google: { families: [ 'Noto+Sans::latin' ] }
     };
     (function() {
