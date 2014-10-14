@@ -1,34 +1,28 @@
 p,body,pre { margin:0;padding:0; }
 input:outline { border:0; }
 font[size="1"] { font-size: 14px;color:#bbb; }
-font[color="black"], b {color:#fff;}
-font[color="green"] {color:rgb(125, 248, 125);}
+font[color="black"], b { color:#fff; }
+font[color="green"] { color:rgb(125, 248, 125); }
 
 #command {font:300 15px/1 consolas;width:580px;padding:4px 10px;position:fixed;top:0;left:50%;margin-left:-290px;background:#555;z-index:3;border:1px solid #808080;color:#7EC7EF;display:none;border-radius:5px;}
 #command > input { outline:none;font:300 15px/1 consolas;width:566px;background:none;border:none;color:inherit;margin-left:4px; }
-/*
-#tip { position:fixed;top:0;left:0;right:0;bottom:0;z-index:9;text-align:center;color:#fff;border-radius:10px;display:block;opacity:1;pointer-events:none; }
-#tip._off { top:-1500px;opacity:0;transition:all 1s; } */
 
+#status-local, #status-db { cursor: pointer; }
 
-#status-local, #status-db{ cursor: pointer; }
-
-/*#status-local{ background: #008000; }*/
-/*#status-db{ background: #f00; }*/
-
-#editor { width:100%;height:100%;background: #3F4041;color:#bbb;}
-#editor a {color:#A1C0FD;}
+#editor   { width: 100%; height: 100%; background-color: #3F4041; color: #bbb; }
+#editor a { color: #A1C0FD; }
 #editor .button, 
 #head-line input,
 #head-line select{ display: inline-block; padding: 6px 12px; font-size: 14px; font-weight: 400; line-height: 1.42857143; text-align: center; white-space: nowrap; vertical-align: middle;
                    cursor: pointer; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; background-image: none; border: 1px solid rgba(0, 0, 0, 0);
                    border-radius: 4px; } 
 #editor .button, 
-#head-line input { color: #FFF; background-color: #5BC0DE; border-color: #46B8DA; }
 #editor .button  { margin-left: 5px; text-decoration: none; } 
-#head-line { padding: 4px 0; width: 95%; margin: 0 auto; }
+
+#head-line       { padding: 4px 0; width: 96%; margin: 0 auto; }
 #head-line:after { content: ''; display: block; clear:both;}
 
+#head-line input                         { color: #FFF; background-color: #5BC0DE; border-color: #46B8DA; }
 #head-line input[value="Publish"]        { background-color: #F0AD4E; border-color: #EEA236; margin-right: 5px; }
 #head-line input[value="Clear local"]    { background-color: #D9534F; border-color: #D43F3A; float: right; }
 #head-line input[value="Commit to DB"]   { background-color: #428BCA; border-color: #357EBD; }
@@ -56,15 +50,13 @@ font[color="green"] {color:rgb(125, 248, 125);}
 .tip_view ._code { padding-left:70px; }
 .tip_view ._code > b { font-style:normal;color:#DD0; }
 
-
 center > table:first-child { display:none; }
 center > p > table { table-layout:fixed;width:100%;height:100%; }
 
 #tmpl_name { color:blue;font: 700 16px/1 consolas;text-align:center;background:none;border:0; }
 
-
-body .CodeMirror { width:96%;height:880px;font:300 15px/1.2 consolas;position:relative;margin:0 auto; } 
-body .CodeMirror._f11 { position:fixed;left:0;top:0;width:100%;height:100%;z-index:2; }
+body .CodeMirror { width: 96%; height: 880px; font: 300 15px/1.2, font-family: 'DejaVu Sans Mono', 'consolas', monospace; position: relative; margin: 0 auto; } 
+body .CodeMirror._f11 { position: fixed; left: 0; top: 0; width: 100%; height: 100%; z-index: 2; }
 
 /*.CodeMirror-vscrollbar::-webkit-scrollbar,
 .CodeMirror-hscrollbar::-webkit-scrollbar{background:#eee;width:12px;height:12px;}
