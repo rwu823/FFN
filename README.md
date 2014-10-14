@@ -1,9 +1,5 @@
 #FFN
 
-#####Please review the change log
-[Change log](https://github.com/hiro0903/FFN/blob/master/template/assets/changelog.md)
-
-
 ##How to use?
 Install add-ons in your favorited browser
 
