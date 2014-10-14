@@ -1,6 +1,6 @@
 // ==UserScript==
-// @id             ffn-template
-// @name           ffn-template
+// @id             ffn-dictionary
+// @name           ffn-dictionary
 // @version        2014.10.14
 // @author         Chris Chu <cchu.tw@ffn.com>
 // @description    Improvement template system
