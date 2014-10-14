@@ -18,7 +18,7 @@ input[type="submit"],
 #head-line input,
 #head-line select{ display: inline-block; padding: 1px 5px; font-size: 12px; font-weight: 400; line-height: 1.4; text-align: center; white-space: nowrap; vertical-align: middle;
                    cursor: pointer; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; background-image: none; border: 1px solid rgba(0, 0, 0, 0);
-                   border-radius: 3px; } 
+                   border-radius: 3px; font-family: 'Noto Sans', sans-serif; } 
 #editor .button  { margin-left: 5px; text-decoration: none; } 
 
 #head-line       { padding: 4px 0; width: 96%; margin: 0 auto; }
