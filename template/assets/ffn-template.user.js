@@ -1,15 +1,14 @@
 // ==UserScript==
 // @id             ffn-template
 // @name           ffn-template
-// @version        2013.8.30
-// @author         Rocky Wu <rwu.tw@ffn.com>
+// @version        2014.10.14
+// @author         Chris Chu <cchu.tw@ffn.com>
 // @description    Improvement template system
-// @website        https://github.com/rwu823/FFN/tree/master/template
-// @updateURL      https://raw.github.com/rwu823/FFN/master/template/assets/ffn-template.user.js
-// @icon           https://raw.github.com/rwu823/FFN/master/template/assets/favicon.png
+// @website        https://github.com/hiro0903/FFN/tree/master/template
+// @updateURL      https://raw.github.com/hiro0903/FFN/master/template/assets/ffn-template.user.js
+// @icon           https://raw.github.com/hiro0903/FFN/master/template/assets/favicon.png
 
-// @include        *friendfinderinc.com*/cgi-bin/admin/dictionary/*
-// @include        *friendfinderinc.com*/cgi-bin/admin/release/cr.cgi*
+// @include        *friendfinderinc.com*/cgi-bin/admin/dictionary/editor.cgi*
 
 // @run-at         document-end
 // ==/UserScript==
@@ -23,5 +22,5 @@
 
   el_script.onload = init
 })(function(){
-  unsafeWindow.seajs.use('https://rawgit.com/rwu823/FFN/master/template/main.js')
+  unsafeWindow.seajs.use('https://rawgit.com/hiro0903/FFN/master/template/main.js')
 })
