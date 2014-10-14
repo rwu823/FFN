@@ -426,14 +426,14 @@ define(function(require, exports, module) {
         runCodemirror: function() {
             Load.codemirror({
                 emmet: true,
-                theme: 'night'
+                theme: 'monokai'
             }, function() {
 
                 CM = CodeMirror.fromTextArea($advedit[0], {
                     mode: 'text/' + (/^(javascript|css)[-_]/i.test(QS.keyword) && RegExp.$1 || 'html'),
                     lineNumbers: true,
                     matchBrackets: true,
-                    theme: 'night',
+                    theme: 'monokai',
                     tabSize: 2,
                     autoCloseTags: true,
 
