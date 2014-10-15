@@ -31,12 +31,12 @@ define(function(require, exports, module) {
 
         $headLine = getHeadLine(),
 
-        $btnPublish = $('input[value="Publish"]'),
-        $btnLoadLocal = $('input[value="Load local"]'),
-        $btnSaveLocal = $('input[value="Save local"]'),
-        $btnClearLocal = $('input[value="Clear local"]'),
-        $btnReloadFromDB = $('input[value="Reload from DB"]'),
-        $btnCommit = $('input[value="Commit to DB"]'),
+        $btnPublish = $('input[value="Publish"]').addClass('btn btn-warning btn-xs'),
+        $btnLoadLocal = $('input[value="Load local"]').addClass('btn btn-primary'),
+        $btnSaveLocal = $('input[value="Save local"]').addClass('btn btn-primary'),
+        $btnClearLocal = $('input[value="Clear local"]').addClass('btn btn-danger btn-xs'),
+        $btnReloadFromDB = $('input[value="Reload from DB"]').addClass('btn btn-primary'),
+        $btnCommit = $('input[value="Commit to DB"]').addClass('btn btn-primary'),
         $pickReview = $('select[name="pickreview"]'),
         $links = $form.find('a'),
         /*
@@ -46,9 +46,12 @@ define(function(require, exports, module) {
         $history      = $links.eq(3).addClass('button'),  //History
         $preview      = $links.eq(4).addClass('button'),  //Preview
         */
-        $info       = $links.eq(5).addClass('button').attr('target', '_blank'), //Info
-        $check_push = $links.eq(6).addClass('button').attr('target', '_blank'), //Check Push
-        $fix_char   = $links.eq(7).addClass('button').attr('target', '_blank'); //Fix Garbled Characters
+        $info       = $links.eq(5).addClass('btn btn-info').attr('target', '_blank'), //Info
+        $check_push = $links.eq(6).addClass('btn btn-info').attr('target', '_blank'), //Check Push
+        $fix_char   = $links.eq(7).addClass('btn btn-info').attr('target', '_blank'), //Fix Garbled Characters
+        $group      = $('<div />').addClass('btn-group btn-group-xs').append($info, $check_push, $fix_char);
+
+        $btnLoadLocal.parent().addClass('btn-group');
 
     if (1 || location.port === '21321') !function() {
 
@@ -56,7 +59,7 @@ define(function(require, exports, module) {
         $headLine = $('#head-line');
         $headLine
             .html($btnPublish)
-            .append($btnCommit, $pickReview, $info, $check_push, $fix_char, $btnClearLocal);
+            .append($btnCommit, $pickReview, $group, $btnClearLocal);
 
         $status.append(' ' + document.title);
     }();
@@ -434,7 +437,7 @@ define(function(require, exports, module) {
                     lineNumbers: true,
                     matchBrackets: true,
                     theme: 'monokai',
-                    tabSize: 2,
+                    tabSize: 4,
                     autoCloseTags: true,
 
                     profile: 'xhtml'

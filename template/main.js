@@ -2,7 +2,8 @@
 seajs.config({
     base: 'http://hiro0903.github.io',
     preload: [
-        '//ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js'
+        '//ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js',
+        'http://hiro0903.github.io/lib/js/bootstrap.min.js'
     ]
 })
 
