@@ -36,8 +36,8 @@ define(function(require, exports, module) {
         $btnSaveLocal = $('input[value="Save local"]').addClass('btn btn-primary'),
         $btnClearLocal = $('input[value="Clear local"]').addClass('btn btn-danger btn-xs'),
         $btnReloadFromDB = $('input[value="Reload from DB"]').addClass('btn btn-primary'),
-        $btnCommit = $('input[value="Commit to DB"]').addClass('btn btn-xs btn-primary'),
-        $pickReview = $('select[name="pickreview"]').addClass('btn btn-xs btn-default'),
+        $btnCommit = $('input[value="Commit to DB"]').addClass('btn btn-primary'),
+        $pickReview = $('select[name="pickreview"]'),
         $links = $form.find('a'),
         /*
         $grid         = $links.eq(0).addClass('button'),  //Grid
@@ -49,7 +49,7 @@ define(function(require, exports, module) {
         $info       = $links.eq(5).addClass('btn btn-info').attr('target', '_blank'), //Info
         $check_push = $links.eq(6).addClass('btn btn-info').attr('target', '_blank'), //Check Push
         $fix_char   = $links.eq(7).addClass('btn btn-info').attr('target', '_blank'), //Fix Garbled Characters
-        $group      = $('<div>').addClass('btn-group btn-group-xs').append($info, $check_push, $fix_char);
+        $group      = $('<div />').addClass('btn-group btn-group-xs').append($info, $check_push, $fix_char);
 
         $btnLoadLocal.parent().addClass('btn-group');
 
