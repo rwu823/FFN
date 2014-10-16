@@ -34,6 +34,7 @@ input[type="submit"],
 #head-line input[value="Publish"]        { background-color: #F0AD4E; border-color: #EEA236; margin-right: 5px; }
 #head-line input[value="Clear local"]    { background-color: #D9534F; border-color: #D43F3A; float: right; }
 #head-line input[value="Commit to DB"]   { background-color: #428BCA; border-color: #357EBD; }
+#head-line select[name="pickreview"]     { max-width: 300px; }
 #head-line input[value="Load local"]     { display: none; }
 #head-line input[value="Save local"]     { display: none; }
 #head-line input[value="Reload from DB"] { display: none; }
