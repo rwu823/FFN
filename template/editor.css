@@ -15,6 +15,9 @@ font[color="red"]   { color: #CC932B; }
 
 #editor   { width: 100%; height: 100%; background-color: #47484B; color: #bbb; }
 #editor a { color: #A1C0FD; }
+#editor>p { font-size: 0 } /* Contents of */
+#editor>font[size="+1"] { position: absolute; left: 2.5%; font-size: 13px }  /* {user} opened this template {time} ago */
+
 input[type="submit"],
 #editor .button, 
 #head-line input,
@@ -23,7 +26,7 @@ input[type="submit"],
                    border-radius: 3px; } 
 #editor .button  { margin-left: 5px; text-decoration: none; } 
 
-#head-line       { padding: 4px 0; width: 96%; margin: 0 auto; }
+#head-line       { padding: 4px 0; width: 96%; margin: 0 auto; font-size: 12px; }
 #head-line:after { content: ''; display: block; clear:both;}
 
 #editor .button, 
@@ -77,6 +80,8 @@ body .CodeMirror._f11 { position: fixed; left: 0; top: 0; width: 100%; height: 1
 td[bgcolor="white"] { background-color: #1C1C1E; color: #CCC; }
 a[href^="grid.cgi"] { color: #D85896; } /* tree, use, parse */
 a[href^="pushtolive.cgi"] { color: #B770A6; } 
+
+body>center>hr~* { display: none; }  /* send email preview */
 
 /*.CodeMirror-vscrollbar::-webkit-scrollbar,
 .CodeMirror-hscrollbar::-webkit-scrollbar{background:#eee;width:12px;height:12px;}
