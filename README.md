@@ -1,5 +1,7 @@
 #FFN
 
+[![Join the chat at https://gitter.im/rwu823/FFN](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/rwu823/FFN?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 #####Please review the change log
 [Change log](https://github.com/rwu823/FFN/blob/master/template/assets/changelog.md)
 
